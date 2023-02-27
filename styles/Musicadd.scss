@@ -1,0 +1,27 @@
+@import "./Variables.scss";
+
+.MusicAdd {
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__form {
+        background: $main-color;
+        height: 500px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0px $main-color;
+        border: solid 1px $main-color;
+        .Forms {
+            width: 60%;
+            height: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

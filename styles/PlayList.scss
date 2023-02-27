@@ -1,0 +1,13 @@
+.PlayList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    &__Search {
+        width: 45%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+}

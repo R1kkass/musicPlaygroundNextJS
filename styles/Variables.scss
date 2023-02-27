@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$main-color: rgb(0, 190, 0);
+
+body {
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-weight: 600;
+    background: #181818;
+    svg,
+    object {
+        cursor: pointer;
+    }
+    object {
+        z-index: 9999999;
+        width: 25px;
+    }
+}

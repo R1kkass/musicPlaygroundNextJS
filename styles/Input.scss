@@ -1,0 +1,26 @@
+@import "./Variables.scss";
+
+.Input__main {
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    width: 80%;
+    outline: none;
+    border: 1px solid $main-color;
+    color: black;
+    border-radius: 10px;
+    transition: 0.3s;
+    &:hover {
+        border-radius: 5px;
+    }
+    &:active {
+        box-shadow: 0 0 5px 2px $main-color;
+    }
+    &:focus {
+        box-shadow: 0 0 5px 2px $main-color;
+        border-radius: 5px;
+    }
+    &::placeholder {
+        color: black;
+    }
+}
