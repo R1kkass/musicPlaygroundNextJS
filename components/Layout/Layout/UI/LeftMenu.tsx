@@ -79,6 +79,9 @@ const LeftMenu: FC = () => {
                         <div>
                             <Link href="/allmusic">Музыка</Link>
                         </div>
+                        <div>
+                            <Link href="/musicadd">Добавить музыку</Link>
+                        </div>
                     </div>
                 </div>
             </CSSTransition>

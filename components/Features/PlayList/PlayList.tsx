@@ -21,12 +21,8 @@ type TList = {
 const PlayList: FC<IPlayList> = observer(({ data = [] }) => {
     return (
         <div className="PlayList">
-            <div className="PlayList__Search">
-                <Input placeholder="Поиск..." />
-                <StyledButton color="white">Искать</StyledButton>
-            </div>
             <div className="UnitMusic">
-                {data?.map((music) => (
+                {switchMiusic?.musicArray?.map((music) => (
                     <div className="UnitMusic__div" key={music?.id}>
                         <UnitAudio
                             id={music?.id}

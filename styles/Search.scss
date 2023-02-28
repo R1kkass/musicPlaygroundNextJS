@@ -1,0 +1,28 @@
+@import "./Variables.scss";
+
+.Search {
+    width: 170px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    height: 15px;
+    padding: 7px;
+    outline: none;
+    position: absolute;
+    transition: 0.3s;
+    box-shadow: 0 0 3px 1px $main-color;
+    &:focus {
+        box-shadow: 0 0 5px 3px $main-color;
+    }
+}
+
+
+
+.Search__container {
+    display: flex;
+    align-items: center;
+    svg{
+        z-index: 102;
+        margin-left: 155px;
+    }
+}

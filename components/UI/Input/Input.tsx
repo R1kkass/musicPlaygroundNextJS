@@ -6,7 +6,7 @@ type Props = {
 
 export type Ref = HTMLInputElement;
 
-const Input = forwardRef<HTMLInputElement>((props, ref) => (
+const Input = forwardRef<HTMLInputElement>((props:any, ref) => (
     <input ref={ref} className="Input__main" {...props}/>
 ))
 

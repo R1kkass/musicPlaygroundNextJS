@@ -193,8 +193,13 @@
     margin-top: 10px;
     height: 60px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     box-shadow: 0 0 3px 1px rgb(87, 87, 87); 
+    transition: 0.3s;
+    &:hover{
+      background:rgb(99, 99, 99); 
+    }
   }
   &__main{
     width: 100%;

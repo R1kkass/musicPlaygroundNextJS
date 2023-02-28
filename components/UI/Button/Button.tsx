@@ -14,6 +14,7 @@ const StyledButton = styled.button<any>`
  cursor: pointer;
  padding: 5px;
  transition: 0.3s;
+ box-shadow: 0 0 3px 1px rgb(0,163,0);
  outline: 1px solid rgb(0,163,0);
  &:hover{ 
     background: none; 

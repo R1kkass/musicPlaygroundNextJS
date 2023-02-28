@@ -6,7 +6,8 @@
     justify-content: center;
     align-items: center;
     &__form {
-        background: $main-color;
+        background: rgb(87,87,87, 0.3);
+        
         height: 500px;
         width: 50%;
         display: flex;
@@ -15,8 +16,12 @@
         border-radius: 5px;
         box-shadow: 0 0 5px 0px $main-color;
         border: solid 1px $main-color;
+        div{
+            filter: blur(4px);
+        }
         .Forms {
             width: 60%;
+            filter: blur(0);
             height: 40%;
             display: flex;
             justify-content: space-between;

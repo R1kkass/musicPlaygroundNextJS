@@ -8,7 +8,7 @@ const AllMusic: FC<any> = observer(({ data }) => {
     switchMiusic.musicArrAdd(data)
   }, [])
 
-  return <PlayList data={data} />
+  return <PlayList data={switchMiusic.musicArray} />
 })
 
 export async function getServerSideProps(context: any) {

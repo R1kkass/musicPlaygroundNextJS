@@ -11,6 +11,8 @@
 
 .Layout {
     display: flex;
+    width: 100%;
+    position: fixed;
     align-items: center;
     justify-content: space-around;
     height: 60px;
@@ -23,15 +25,7 @@
 }
 
 .Footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100px;
-    background-color: rgb(0, 190, 0);
-    a {
-        text-decoration: none;
-        color: white;
-    }
+    height: 60px;
 }
 
 @keyframes showMenu {
@@ -88,4 +82,9 @@
     width: 100%;
     height: 100vh;
     top: 0;
+}
+
+.ContainerLayout{
+    width: 100%;
+    height: 60px;
 }
