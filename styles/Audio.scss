@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
     background-image: radial-gradient(rgb(255, 221, 237), rgba(243, 145, 195, 1));
   }
   
@@ -184,7 +185,7 @@
 
 .UnitMusic{
   width: 50%;
-  
+  min-width: 500px;
   &__div{
     background-color: #282828;
     overflow: hidden;
@@ -193,6 +194,24 @@
     height: 60px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 3px 1px rgb(87, 87, 87);
+    box-shadow: 0 0 3px 1px rgb(87, 87, 87); 
+  }
+  &__main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    .Main__div{
+      width: 150px;
+      justify-content: space-between;
+      display: flex;
+      p{
+
+        &:nth-child(2){
+          width: 100px;
+        }
+      }
+    }
   }
 }

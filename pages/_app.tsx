@@ -8,7 +8,6 @@ import '../styles/Button.scss'
 import '../styles/Musicadd.scss'
 import '../styles/Audio.scss'
 import '../styles/PlayList.scss'
-import '../styles/input.scss'
 
 import Layout from 'components/Layout/Layout/Layout';
 import MyAudio from 'components/UI/MyAudio/MyAudio';

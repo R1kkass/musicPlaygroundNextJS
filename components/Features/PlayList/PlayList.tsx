@@ -33,7 +33,6 @@ const PlayList: FC<IPlayList> = observer(({ data = [] }) => {
                             music={`http://localhost:5001/${music?.hashName}`}
                             name={music?.name}
                         />
-                        {music?.name}
                     </div>
                 ))}
             </div>
