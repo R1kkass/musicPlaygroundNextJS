@@ -38,6 +38,9 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
             duration()
             if (switchMusic.status) {
                 switchMusic.statusSw(!switchMusic.status)
+                console.log(switchMusic.volume);
+                switchMusic.music.volume = switchMusic.volume || 1
+                console.log(switchMusic.music.volume);
                 switchMusic.music.play()
             } else {
                 clearInterval(switchMusic.int)
@@ -72,7 +75,7 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
                                 fill="#fff"
                             />
                         </svg>
-                        <p>{name}</p>
+                        <p>{name} - {switchMusic?.musicArray[id-1]?.author}</p>
                     </div>
                     <div>
                         <p>
@@ -109,7 +112,7 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
                             fill="#fff"
                         />
                     </svg>
-                    <p>{name}</p>
+                    <p>{name} - {switchMusic?.musicArray[id-1]?.author}</p>
                 </div>
                 <div>
                     <p>

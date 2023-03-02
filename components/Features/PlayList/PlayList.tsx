@@ -8,7 +8,7 @@ import switchMiusic from "MobX/store/switchMiusic"
 import { FC, useEffect } from "react"
 
 interface IPlayList {
-    data: TList[]
+    data?: TList[]
 }
 
 type TList = {
@@ -18,7 +18,7 @@ type TList = {
     author: string
 }
 
-const PlayList: FC<IPlayList> = observer(({ data = [] }) => {
+const PlayList: FC<IPlayList> = observer(() => {
     return (
         <div className="PlayList">
             <div className="UnitMusic">

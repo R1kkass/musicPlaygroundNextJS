@@ -16,10 +16,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
                 <div className="ContainerLayout">
                     <div className="Layout">
                         <LeftMenu></LeftMenu>
-                        <Link href="/">Главная</Link>
+                        {/* <Link href="/">Главная</Link>
                         <Link href="/login">Вход</Link>
                         <Link href="/registration">Авторизация</Link>
-                        <Link href="/allmusic">Музыка</Link>
+                        <Link href="/allmusic">Музыка</Link> */}
                         <div className="PlayList__Search">
                             <Search placeholder="Поиск..." />
                         </div>

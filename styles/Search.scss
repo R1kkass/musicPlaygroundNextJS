@@ -11,18 +11,18 @@
     position: absolute;
     transition: 0.3s;
     box-shadow: 0 0 3px 1px $main-color;
+    background-color: #f6f6f6;
     &:focus {
         box-shadow: 0 0 5px 3px $main-color;
     }
 }
 
-
-
 .Search__container {
     display: flex;
     align-items: center;
-    svg{
+    svg {
         z-index: 102;
         margin-left: 155px;
+        transition: 0.3s;
     }
 }

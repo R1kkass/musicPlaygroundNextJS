@@ -2,6 +2,7 @@ import axios from "axios"
 import switchMiusic from "MobX/store/switchMiusic"
 import { forwardRef, useRef } from "react"
 import { IData } from "../MyAudio/MyAudio"
+import { redirect } from 'next/navigation';
 
 interface IRes {
     data: {

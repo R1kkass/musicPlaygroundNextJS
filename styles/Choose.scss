@@ -1,0 +1,39 @@
+@import "./Variables.scss";
+
+.Choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    button {
+        height: 500px;
+        border-radius: 20px;
+        border: $main-color solid 1px;
+        width: 20%;
+        color: white;
+        background: none;
+        min-width: 250px;
+        transition: 0.3s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            height: 100%;
+            width: 100%;
+            a {
+                margin: auto;
+                color: white;
+
+                font-size: 26px;
+                text-decoration: none;
+                width: 100%;
+                display: block;
+                height: 100%;
+            }
+        }
+        &:hover {
+            background-color: $main-color;
+        }
+    }
+}

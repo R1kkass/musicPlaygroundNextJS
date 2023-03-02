@@ -9,6 +9,9 @@ import '../styles/Musicadd.scss'
 import '../styles/Audio.scss'
 import '../styles/PlayList.scss'
 import '../styles/Search.scss'
+import '../styles/Choose.scss'
+import '../styles/Album.scss'
+
 
 
 import Layout from 'components/Layout/Layout/Layout';

@@ -63,6 +63,7 @@ const MyAudio: FC = observer(() => {
 
     function switchMusic(id: number) {
         let a: any = switchMiusic.musicArray[id - 1]
+        let b = id-1
         if (!a) {
             a = switchMiusic.musicArray[0]
         }
@@ -70,7 +71,9 @@ const MyAudio: FC = observer(() => {
             typeof Audio !== "undefined" &&
             new Audio(`http://localhost:5001/${a?.hashName}`)
         switchMiusic.music.pause()
-        switchMiusic.switch(link, a?.name, a?.id)
+        switchMiusic.switch(link, a?.name, b)
+        console.log(b);
+        
         switchMiusic.statusSw(true)
         switchMiusic.timeSet(0)
         pause()
@@ -143,7 +146,7 @@ const MyAudio: FC = observer(() => {
                         </svg>
                     </div>
                     <div>
-                        <p>{switchMiusic?.name}</p>
+                        <p>{switchMiusic?.name} - {switchMiusic?.musicArray[switchMiusic?.id-1]?.author}</p>
                     </div>
                 </div>
                 <div className="MyAudio__right">

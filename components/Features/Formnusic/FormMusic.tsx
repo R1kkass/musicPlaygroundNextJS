@@ -15,12 +15,13 @@ const FormMusic = () => {
     const refName = useRef<HTMLInputElement>(null)
     const refFile = useRef<any>(null)
     const refAuthor = useRef<HTMLInputElement>(null)
+    const genreRef = useRef<HTMLSelectElement>(null)
 
     const addMusic = async () => {
         formData.append("music", refFile?.current?.files[0])
         formData.append("name", refName?.current?.value || "")
         formData.append("author", refAuthor?.current?.value || "")
-
+        formData.append("genre", genreRef?.current?.value || "")
         const res = await axios({
             method: "post",
             url: `http://localhost:5001/api/music/create`,
@@ -35,13 +36,14 @@ const FormMusic = () => {
         formData.delete("music")
         formData.delete("name")
         formData.delete("author")
+        formData.delete("genre")
     }
 
     return (
         <div className="Forms">
             <Input placeholder="Название" ref={refName} />
             <Input placeholder="Автор" ref={refAuthor} />
-            <SelectForm />
+            <SelectForm ref={genreRef} />
             <input type="file" ref={refFile} accept=".mp3" />
             <StyledButton color="white" onClick={addMusic}>
                 Добавить

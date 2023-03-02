@@ -16,6 +16,8 @@ class SwitchMusic {
     }
 
     switch(mus?: any, name?: string, id?: number) {
+        console.log(id);
+        
         if (mus.current) {
             this.music = mus.current
             this.id = id || 0
@@ -37,7 +39,7 @@ class SwitchMusic {
                 )
             }
             this.name = this.musicArray[id || 0]?.name
-            this.id = this.musicArray[id || 0]?.id
+            this.id = id || 0
             this.music.play()
         }
     }
