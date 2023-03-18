@@ -54,11 +54,7 @@ const FormAddAlbum = () => {
         if (imgFile) {
             fr.readAsDataURL(refImg.current?.files[0])
 
-            fr.addEventListener(
-                "load",
-                fn,
-                false
-            )
+            fr.addEventListener("load", fn, false)
         }
     }, [imgFile, fr.readyState])
 
@@ -75,7 +71,7 @@ const FormAddAlbum = () => {
         }
         formData.set("album", arrMusic[0]?.album || "")
         formData.set("genre", arrMusic[0]?.genre || "")
-
+        formData.set("img", refImg?.current?.files[0])
         const res = await axios({
             method: "post",
             url: `http://localhost:5001/api/music/create`,
@@ -90,6 +86,7 @@ const FormAddAlbum = () => {
         formData.delete("music")
         formData.delete("name")
         formData.delete("author")
+        formData.delete("img")
     }
 
     const addArr = () => {

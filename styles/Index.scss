@@ -1,0 +1,34 @@
+@import "./Variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Index{
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container{
+        width: 50%;
+        height: 700px;
+        border: 1px solid $main-color;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        display: flex;
+        overflow: hidden;
+    }
+    &__info{
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        background-color: #505050;
+        backdrop-filter: blur(5px);
+    }
+    &__image{
+        padding: 20px;
+    }
+}

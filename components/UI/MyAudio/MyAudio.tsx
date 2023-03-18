@@ -14,12 +14,20 @@ import switchMiusic from "MobX/store/switchMiusic"
 let int: any
 
 export interface IData {
-    id: number
-    name: string
-    hashName: string
-    author: string
-    album: string
-    genreId: string
+        id: number
+        name: string
+        hashName: string
+        author: string
+        album: string
+        genreId: string
+        Music?:{
+            id: number
+            name: string
+            hashName: string
+            author: string
+            album: string
+            genreId: string
+        }
 }
 
 const MyAudio: FC = observer(() => {
@@ -62,17 +70,20 @@ const MyAudio: FC = observer(() => {
     }
 
     function switchMusic(id: number) {
-        let a: any = switchMiusic.musicArray[id - 1]
-        let b = id-1
+        let ids = id
+        let a: any = switchMiusic.musicArray[id]
+        
         if (!a) {
             a = switchMiusic.musicArray[0]
+            ids=0
         }
+        console.log(switchMiusic.musicArray[ids ? ids - 1 : 0]?.hashName);
         let link =
             typeof Audio !== "undefined" &&
             new Audio(`http://localhost:5001/${a?.hashName}`)
         switchMiusic.music.pause()
-        switchMiusic.switch(link, a?.name, b)
-        console.log(b);
+        switchMiusic.switch(link, a?.name, ids)
+        console.log(a.hashName);
         
         switchMiusic.statusSw(true)
         switchMiusic.timeSet(0)

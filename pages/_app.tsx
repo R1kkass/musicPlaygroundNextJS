@@ -11,8 +11,9 @@ import '../styles/PlayList.scss'
 import '../styles/Search.scss'
 import '../styles/Choose.scss'
 import '../styles/Album.scss'
-
-
+import '../styles/Index.scss'
+import '../components/Features/AlbumSlider/AlbumSlider.scss'
+import '../components/Features/AlbumModal/AlbumModal.scss'
 
 import Layout from 'components/Layout/Layout/Layout';
 import MyAudio from 'components/UI/MyAudio/MyAudio';

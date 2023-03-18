@@ -16,8 +16,6 @@ class SwitchMusic {
     }
 
     switch(mus?: any, name?: string, id?: number) {
-        console.log(id);
-        
         if (mus.current) {
             this.music = mus.current
             this.id = id || 0
@@ -61,7 +59,7 @@ class SwitchMusic {
         this.music.play()
     }
 
-    musicArrAdd(arr: Array<IData>) {
+    musicArrAdd(arr: any) {
         this.musicArray = arr
     }
 
@@ -88,6 +86,10 @@ class SwitchMusic {
 
     volumeSet(volumes: string){
         this.volume=String(Number(volumes)/100)
+    }
+
+    idSet(id: number){
+        this.id=0
     }
 }
 

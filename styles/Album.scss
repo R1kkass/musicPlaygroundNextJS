@@ -1,11 +1,8 @@
 .Album {
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 100%;
-    div {
-        min-width: 60%;
-    }
 }

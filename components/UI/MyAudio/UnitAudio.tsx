@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite"
 import { FC, useEffect, useLayoutEffect, useRef, useState } from "react"
+import PlusSvg from "SVG/svg"
 import switchMusic from "../../../MobX/store/switchMiusic"
 
 let int: ReturnType<typeof setInterval>
@@ -38,9 +39,7 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
             duration()
             if (switchMusic.status) {
                 switchMusic.statusSw(!switchMusic.status)
-                console.log(switchMusic.volume);
                 switchMusic.music.volume = switchMusic.volume || 1
-                console.log(switchMusic.music.volume);
                 switchMusic.music.play()
             } else {
                 clearInterval(switchMusic.int)
@@ -75,9 +74,12 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
                                 fill="#fff"
                             />
                         </svg>
-                        <p>{name} - {switchMusic?.musicArray[id-1]?.author}</p>
+                        <p>
+                            {name} - {switchMusic?.musicArray[id - 1]?.author}
+                        </p>
                     </div>
-                    <div>
+                    <div className="Main__timer">
+                        <PlusSvg idMusic={switchMusic?.musicArray[id - 1]?.id} />
                         <p>
                             {Math.floor(time / 60)} :{" "}
                             {Math.floor(time % 60) < 10
@@ -112,9 +114,12 @@ const UnitAudio: FC<{ music: string; name: string; id: number }> = observer(
                             fill="#fff"
                         />
                     </svg>
-                    <p>{name} - {switchMusic?.musicArray[id-1]?.author}</p>
+                    <p>
+                        {name} - {switchMusic?.musicArray[id - 1]?.author}
+                    </p>
                 </div>
-                <div>
+                <div className="Main__timer">
+                    <PlusSvg idMusic={switchMusic?.musicArray[id - 1]?.id} />
                     <p>
                         {Math.floor(time / 60)} :{" "}
                         {Math.floor(time % 60) < 10
