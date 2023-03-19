@@ -18,11 +18,13 @@ Stack:
 
 Страница плейлиста
 
-![image](https://user-images.githubusercontent.com/118563722/223209171-bf2e1e65-8021-4d12-955c-e0061c140372.png)
+![image](https://user-images.githubusercontent.com/118563722/226206466-cd8f6e0f-c9e1-47ff-8fb6-1ea47954884a.png)
 
 Окно альбома
+
 ![image](https://user-images.githubusercontent.com/118563722/226205830-1b3acd6c-f6c1-4604-bade-1c655b9f35e6.png)
 
 Окно добавления альбома
+
 ![image](https://user-images.githubusercontent.com/118563722/226206405-88c3278d-42ad-435a-b443-6a37fd956254.png)
 
